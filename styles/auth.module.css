@@ -1,0 +1,161 @@
+/* styles/auth.module.css */
+.authContainer {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.authHeader {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.authHeader h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.authHeader p {
+  opacity: 0.9;
+}
+
+.authTabs {
+  display: flex;
+  background-color: var(--dark-color);
+}
+
+.authTab {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.authTab.active {
+  background-color: var(--primary-color);
+}
+
+.authContent {
+  padding: 30px;
+}
+
+.authForm {
+  display: none;
+}
+
+.authForm.active {
+  display: block;
+}
+
+.verificationSection {
+  display: none;
+  text-align: center;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+
+.verificationSection.active {
+  display: block;
+}
+
+.verificationCode {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.codeInput {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: 2px solid #ddd;
+  border-radius: var(--border-radius);
+}
+
+.codeInput:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+}
+
+.resendCode {
+  margin-top: 15px;
+  color: var(--secondary-color);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.resendCode.disabled {
+  color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.countdown {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.languageSwitcher {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.languageSwitcher span {
+  font-weight: 500;
+}
+
+.forgotPassword {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.forgotPassword a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgotPassword a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .authContent {
+    padding: 20px;
+  }
+  
+  .codeInput {
+    width: 40px;
+    height: 50px;
+    font-size: 20px;
+  }
+  
+  .languageSwitcher {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 10px auto;
+    width: fit-content;
+  }
+}
